@@ -1,0 +1,43 @@
+Algorithm for Simple Calculator
+
+calculate(num1, num2, operation) Function
+
+1. Input: `num1`, `num2` (numbers), `operation` (character: '+', '-', '*', '/')
+2. Process:
+   - If `operation` is '+', return `num1 + num2`.
+   - If `operation` is '-', return `num1 - num2`.
+   - If `operation` is '*', return `num1 * num2`.
+   - If `operation` is '/', check if `num2` is 0:
+     - If `num2` is 0, return "Error! Division by zero."
+     - Otherwise, return `num1 / num2`.
+3. Output: Result of the arithmetic operation or an error message for division by zero.
+
+`main()` Function
+
+1. Initialize:
+   - Create a dictionary `operations` mapping: '1' -> '+', '2' -> '-', '3' -> '*', '4' -> '/'.
+2. Loop (infinite loop until broken):
+   - Print the menu:
+     Simple Calculator
+     1. Addition
+     2. Subtraction
+     3. Multiplication
+     4. Division
+     5. Exit
+
+   - Prompt user to enter a choice.
+   - Check Choice:
+     - If choice is '5', print "Goodbye!" and break the loop.
+     - If choice not in `operations`, print "Invalid choice. Try again." and continue the loop.
+   - Input Numbers:
+     - Prompt user to enter `num1`.
+     - Prompt user to enter `num2`.
+     - Validate Input:
+       - Try to convert `num1` and `num2` to floats.
+       - If conversion fails, print "Invalid input. Please enter numeric values." and continue the loop.
+   - Perform Calculation:
+     - Retrieve the operation symbol from `operations` using the user choice.
+     - Call `calculate(num1, num2, operation)` and store the result.
+     - Print the result in the format: `num1 operation num2 = result`.
+3. Exit: End the program when the loop breaks.
+

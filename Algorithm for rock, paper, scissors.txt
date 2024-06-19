@@ -1,0 +1,43 @@
+Algorithm for rock, paper, scissors game
+
+1. Initialize Game Setup:
+   - Define a list choices containing 'rock', 'paper', and 'scissors'.
+   - Initialize user_score and computer_score to 0 for tracking scores.
+
+2. Display Welcome Message and Game Loop:
+   - Print a welcome message to greet the player.
+   - Start an indefinite loop (`while True`) to manage multiple rounds of the game.
+
+3. User Input and Choice:
+   - Prompt the user to choose their weapon:
+     - Display options: '1. Rock', '2. Paper', '3. Scissors', '4. Quit'.
+     - Read user input and convert it to lowercase for uniform comparison.
+   
+4. Handle Quit Option:
+   - If the user enters '4' or a choice starting with 'q', print a farewell message and break out of the loop.
+
+5. Validate User Input:
+   - Check if the user's choice (user_choice) is valid ('1', '2', '3'):
+     - If not valid, print an error message and continue to the next iteration of the loop.
+
+6. Convert User Choice to Weapon:
+   - Convert user_choice to an index (user_index) to access choices (`0` for 'rock', `1` for 'paper', `2` for 'scissors').
+
+7. Generate Computer's Choice:
+   - Use random.choice(choices) to randomly select a weapon ('rock', 'paper', or 'scissors') for the computer.
+
+8. Determine Game Outcome:
+   - Compare user_weapon with computer_weapon to determine the result:
+     - If they are the same, it's a tie.
+     - Use conditional statements to determine if the user wins or the computer wins based on game rules (`rock` beats `scissors`, `scissors` beat `paper`, `paper` beats `rock`).
+
+9. Update and Display Scores:
+   - Update user_score or computer_score based on the outcome.
+   - Display the choices made by the user and the computer.
+   - Display the result of the round (tie, user win, or computer win).
+   - Display the current scores (`user_score` and `computer_score`).
+
+10. End Game:
+    - Continue the loop until the user chooses to quit.
+    - After the loop ends (user chooses to quit), print a final message thanking the player for playing the game.
+
